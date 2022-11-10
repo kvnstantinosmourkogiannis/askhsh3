@@ -1,0 +1,40 @@
+public class homeappliancesstore {
+    static String x;
+    public static String getsy() {
+        return y;
+    }
+    public static void sety(String y) {
+        homeappliancesstore.y = y;
+    }
+    public static int getsz() {
+        return z;
+    }
+
+    public static void setz(int z) {
+        homeappliancesstore.z = z;
+    }
+    static String y;
+    static int z;
+
+    public static String getx() {
+        return x;
+    }
+    public static String setx() {return x;}
+    public static void setx(String x) {
+        homeappliancesstore.x = x;
+    }
+    public static void main(String[] args) {
+        x = args[0];
+        y = args[1];
+        try {
+            x = String.valueOf(Integer.parseInt(args[2]));
+            if (x == null || y == null) {
+                System.out.println("sfalma,den dothkan onoma etairias kai address");
+            } else {
+                System.out.println("company name : " + x + "\ncompany adddress : " + y + "\nypaliloi : " + z);
+            }
+        } catch (NumberFormatException a) {
+            System.out.println("sfalma den dothike integer");
+        }
+    }
+}
